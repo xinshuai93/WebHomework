@@ -32,5 +32,68 @@
 5. **HTML 标题**
    * HTML 提供了从大到小6级标题，分别是：```<h1> ~ <h6>```，如下所示：  
    ![Snipaste_2022-06-21_20-10-01.png](https://s2.loli.net/2022/06/21/lUxadgespJmjT3X.png)  
-   效果如图：
+   效果如图：  
    ![Snipaste_2022-06-21_20-10-17.png](https://s2.loli.net/2022/06/21/EzoaLeIYnJwGBFy.png)
+6. **超链接:**```<a>```
+   * 超链接语法：```<a href="https://www.baidu.com/" target="_blank">百度一下</a>```  
+   说明：  
+   1. href即为要跳转去的地址 URL（Uniform Resorce Locator)  
+   2. target属性为_blank表示在新的页面打开超链接（默认是在当前页面打开即_self）  
+   3. 超链接标签包含的内容（当前为文字"百度一下"）即为显示在页面上供用户点击的  
+   效果如图：  
+   ![Snipaste_2022-06-21_21-24-44.png](https://s2.loli.net/2022/06/21/4yjm3hqPNApVwoa.png)
+   * 通过锚点在长页面内实现跳转:代码如下  
+    ```<h1 id="C4">首页</h1>```  
+    ```<a href="#C4">回到首页</a>```  
+    点击首页便可实现长页面跳转  
+7. **图片及文件路径**  
+   * 在页面中插入一张图片：```<img src="https://mdbootstrap.com/img/logo/mdb192x192.jpg" alt="MDB Logo" width="200" height="200">```  
+   * 说明：
+     1. src属性为要显示图片文件的位置 URL，即图片文件的路径
+     2. alt属性当获取图片出现问题时显示的文字（占位符）
+     3. 可为图片指定高宽度，但不建议（可能导致图片变形）
+   * 有三种方式：  
+     1. 网页获取方式。  
+     2. 从本地的目录下的路径引用，但是只能在自己电脑上看到，而别人电脑上没有该图片，便不能看到图片。
+     3. 对于小内存图片，可以用图床转为base64编码进行，如图：  
+       ![Snipaste_2022-06-21_22-41-02.png](https://s2.loli.net/2022/06/21/qTutO5z2ZJgymso.png)
+8. **表格 Table**
+   * 我们可用```<table>```,```<td>```,```<th>```等标签写表格，例如：  
+    ![Snipaste_2022-06-21_22-50-03.png](https://s2.loli.net/2022/06/21/oF4HiXhjfVNOrJe.png)
+   *  效果如图：  
+     ![Snipaste_2022-06-21_22-46-26.png](https://s2.loli.net/2022/06/21/ePOK8LVd57Amksb.png)
+9. **列表 List**
+    * 列表分为无序列表、有序列表  
+    * 无序列表：  
+    使用```<ul>```,```<li>```标签，例如：  
+    ```<ul type="square">```  
+    ```<li>Coffee</li>```  
+    ```<li>Tea</li>```  
+    ```<li>Milk</li>```  
+    ```</ul>```  
+    得到如下效果：  
+    ![Snipaste_2022-06-21_22-57-52.png](https://s2.loli.net/2022/06/21/WR3zOALp4nqvJEU.png)
+    * 有序列表：  
+    ```<ol type="a">```  
+    ```<li>Coffee</li>```  
+    ```<li>Tea</li>```  
+    ```<li>Milk</li>```  
+    ```</ol>```  
+    得到如下效果：  
+    ![Snipaste_2022-06-21_23-01-50.png](https://s2.loli.net/2022/06/21/zmfJtKaPd4sn1Zh.png)
+10. **表单 Form**
+    * 当网站需要获取我们的一些信息如：用户名、密码、选择买什么、买多少、提出意见等等时，我们就需要使用表单（form）来让用户填写或选择。
+    * ```<input>```标签的"type"可以将表单分为很多种：  
+      1. text:用户名  
+      2. password:密码  
+      3. number:只能输入数字  
+      4. radio:单选按钮  
+      5. ```<select>```,```<option>```：下拉列表  
+      6. date:只能输入日期  
+      7. sumit,reset:表单提交、重置按钮  
+    * 而```<input>```当中的"value"则作为值传递给服务器  
+    * 特别的： 当提交时，表单中没有name属性的元素将不会提交，比如上面工作日期的选择器。有name属性的元素其value的值将提交给服务器。
+11. **其他**
+    * 区块元素：```<div>```,```<p>```,```<h1>```等  
+    * 内联元素：他们总是一个接一个进行显示，不会新起一行。如：```<span>```, ```<input>```, ```<td>```, ```<a>```, ```<img>```等。
+    * 如果想写一些特殊文本和源代码之类的：使用```<pre>```标签
